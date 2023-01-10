@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		9B6AEA6F296C10E9006CB1B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEA6E296C10E9006CB1B1 /* AppDelegate.swift */; };
 		9B6AEA71296C10E9006CB1B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEA70296C10E9006CB1B1 /* SceneDelegate.swift */; };
-		9B6AEA73296C10E9006CB1B1 /* CocktailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEA72296C10E9006CB1B1 /* CocktailsViewController.swift */; };
-		9B6AEA76296C10E9006CB1B1 /* Cocktails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEA74296C10E9006CB1B1 /* Cocktails.storyboard */; };
 		9B6AEA78296C10EA006CB1B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEA77296C10EA006CB1B1 /* Assets.xcassets */; };
 		9B6AEA7B296C10EA006CB1B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEA79296C10EA006CB1B1 /* LaunchScreen.storyboard */; };
+		9B6AEA8A296C16CF006CB1B1 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEA89296C16CF006CB1B1 /* Drink.swift */; };
+		9B6AEA8D296C1A45006CB1B1 /* DrinksAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEA8C296C1A45006CB1B1 /* DrinksAPIManager.swift */; };
+		9B6AEA90296C4134006CB1B1 /* CoctailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6AEA8F296C4134006CB1B1 /* CoctailViewController.swift */; };
+		9B6AEA94296C434F006CB1B1 /* Coctail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6AEA93296C434F006CB1B1 /* Coctail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B6AEA6B296C10E9006CB1B1 /* GitHub Lecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Lecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6AEA6E296C10E9006CB1B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6AEA70296C10E9006CB1B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B6AEA72296C10E9006CB1B1 /* CocktailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsViewController.swift; sourceTree = "<group>"; };
-		9B6AEA75296C10E9006CB1B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Cocktails.storyboard; sourceTree = "<group>"; };
 		9B6AEA77296C10EA006CB1B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6AEA7A296C10EA006CB1B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6AEA7C296C10EA006CB1B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B6AEA89296C16CF006CB1B1 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		9B6AEA8C296C1A45006CB1B1 /* DrinksAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksAPIManager.swift; sourceTree = "<group>"; };
+		9B6AEA8F296C4134006CB1B1 /* CoctailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailViewController.swift; sourceTree = "<group>"; };
+		9B6AEA93296C434F006CB1B1 /* Coctail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Coctail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,10 @@
 		9B6AEA83296C1337006CB1B1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9B6AEA87296C13E3006CB1B1 /* Coctails */,
 				9B6AEA84296C1347006CB1B1 /* Launch */,
+				9B6AEA87296C13E3006CB1B1 /* Cocktails */,
+				9B6AEA93296C434F006CB1B1 /* Coctail.storyboard */,
+				9B6AEA8F296C4134006CB1B1 /* CoctailViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -106,13 +112,29 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		9B6AEA87296C13E3006CB1B1 /* Coctails */ = {
+		9B6AEA87296C13E3006CB1B1 /* Cocktails */ = {
 			isa = PBXGroup;
 			children = (
-				9B6AEA72296C10E9006CB1B1 /* CocktailsViewController.swift */,
-				9B6AEA74296C10E9006CB1B1 /* Cocktails.storyboard */,
+				9B6AEA88296C16A9006CB1B1 /* Model */,
 			);
-			path = Coctails;
+			path = Cocktails;
+			sourceTree = "<group>";
+		};
+		9B6AEA88296C16A9006CB1B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9B6AEA89296C16CF006CB1B1 /* Drink.swift */,
+				9B6AEA8B296C1A1E006CB1B1 /* APIManager */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B6AEA8B296C1A1E006CB1B1 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				9B6AEA8C296C1A45006CB1B1 /* DrinksAPIManager.swift */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +197,7 @@
 			files = (
 				9B6AEA7B296C10EA006CB1B1 /* LaunchScreen.storyboard in Resources */,
 				9B6AEA78296C10EA006CB1B1 /* Assets.xcassets in Resources */,
-				9B6AEA76296C10E9006CB1B1 /* Cocktails.storyboard in Resources */,
+				9B6AEA94296C434F006CB1B1 /* Coctail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,23 +208,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6AEA73296C10E9006CB1B1 /* CocktailsViewController.swift in Sources */,
 				9B6AEA6F296C10E9006CB1B1 /* AppDelegate.swift in Sources */,
+				9B6AEA8D296C1A45006CB1B1 /* DrinksAPIManager.swift in Sources */,
 				9B6AEA71296C10E9006CB1B1 /* SceneDelegate.swift in Sources */,
+				9B6AEA90296C4134006CB1B1 /* CoctailViewController.swift in Sources */,
+				9B6AEA8A296C16CF006CB1B1 /* Drink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9B6AEA74296C10E9006CB1B1 /* Cocktails.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9B6AEA75296C10E9006CB1B1 /* Base */,
-			);
-			name = Cocktails.storyboard;
-			sourceTree = "<group>";
-		};
 		9B6AEA79296C10EA006CB1B1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -339,9 +355,10 @@
 				INFOPLIST_FILE = "GitHub Lecture/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Cocktails;
+				INFOPLIST_KEY_UIMainStoryboardFile = Coctail;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,9 +383,10 @@
 				INFOPLIST_FILE = "GitHub Lecture/SupportingFiles/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Cocktails;
+				INFOPLIST_KEY_UIMainStoryboardFile = Coctail;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
